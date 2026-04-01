@@ -19,6 +19,17 @@
 
 <body>
 
+  <!-- ── Page Loader ── -->
+  <div class="page-loader" id="pageLoader">
+    <div class="loader-brand">
+      <span class="brand-bracket">{</span>AS<span class="brand-bracket">}</span>
+    </div>
+    <div class="loader-bar"><div class="loader-fill"></div></div>
+  </div>
+
+  <!-- ── Toast Container ── -->
+  <div class="toast-container" id="toastContainer"></div>
+
   <!-- ╔═══════════════════════════╗
        ║        NAVBAR             ║
        ╚═══════════════════════════╝ -->
@@ -45,7 +56,7 @@
         <button class="theme-btn" id="themeToggle" aria-label="Toggle theme">
           <i class="fa-solid fa-moon" id="themeIcon"></i>
         </button>
-        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
           <span></span><span></span><span></span>
         </button>
       </div>
@@ -101,11 +112,11 @@
         based in <span class="accent-text">Jaipur, Rajasthan</span>.
       </p>
 
-      <!-- Call-to-action buttons -->
+      <!-- CTA Buttons -->
       <div class="hero-ctas fade-up" style="--d:.55s">
-        <a href="#" class="btn btn-primary" download>
+        <button id="downloadBtn" class="btn btn-primary" onclick="downloadResume()">
           <i class="fa-solid fa-file-arrow-down"></i> Download CV
-        </a>
+        </button>
         <a href="#contact" class="btn btn-ghost">
           <i class="fa-solid fa-paper-plane"></i> Hire Me
         </a>
@@ -113,13 +124,13 @@
 
       <!-- Social icons -->
       <div class="hero-socials fade-up" style="--d:.65s">
-        <a href="#" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <a href="https://linkedin.com/in/anurag-sharma" target="_blank" rel="noopener" aria-label="LinkedIn">
           <i class="fa-brands fa-linkedin-in"></i>
         </a>
-        <a href="#" target="_blank" rel="noopener" aria-label="GitHub">
+        <a href="https://github.com/anurag-sharma" target="_blank" rel="noopener" aria-label="GitHub">
           <i class="fa-brands fa-github"></i>
         </a>
-        <a href="mailto:anuragbtp561@gmail.com" aria-label="Email">
+        <a href="mailto:anuragsharma@email.com" aria-label="Email">
           <i class="fa-solid fa-envelope"></i>
         </a>
       </div>
@@ -174,6 +185,27 @@
         </div>
 
       </div>
+
+      <!-- Stats row -->
+      <div class="stats-row">
+        <div class="stat-card reveal">
+          <span class="stat-num" data-target="2">0</span><span class="stat-suffix">+</span>
+          <span class="stat-label">Projects Built</span>
+        </div>
+        <div class="stat-card reveal">
+          <span class="stat-num" data-target="3">0</span><span class="stat-suffix">mo</span>
+          <span class="stat-label">Internship Experience</span>
+        </div>
+        <div class="stat-card reveal">
+          <span class="stat-num" data-target="5">0</span><span class="stat-suffix">+</span>
+          <span class="stat-label">Technologies Known</span>
+        </div>
+        <div class="stat-card reveal">
+          <span class="stat-num" data-target="100">0</span><span class="stat-suffix">%</span>
+          <span class="stat-label">Dedication</span>
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -199,44 +231,41 @@
           </div>
 
           <div class="skill-item">
-            <div class="sk-info"><span>C++</span><span>70%</span></div>
-            <div class="sk-track"><div class="sk-bar" data-w="70"></div></div>
+            <div class="sk-info"><span>OOP Concepts</span><span>80%</span></div>
+            <div class="sk-track"><div class="sk-bar" data-w="80"></div></div>
           </div>
 
           <div class="skill-item">
-            <div class="sk-info"><span>OOP Concepts</span><span>78%</span></div>
-            <div class="sk-track"><div class="sk-fill" data-w="78"></div></div>
-          </div>
-
-          <div class="skill-item">
-            <div class="sk-info"><span>VS Code</span><span>82%</span></div>
-            <div class="sk-track"><div class="sk-bar" data-w="82"></div></div>
-          </div>
-
-          <div class="skill-item">
-            <div class="sk-info"><span>Jupyter Notebook</span><span>75%</span></div>
+            <div class="sk-info"><span>HTML / CSS</span><span>75%</span></div>
             <div class="sk-track"><div class="sk-bar" data-w="75"></div></div>
+          </div>
+
+          <div class="skill-item">
+            <div class="sk-info"><span>Problem Solving</span><span>80%</span></div>
+            <div class="sk-track"><div class="sk-bar" data-w="80"></div></div>
+          </div>
+
+          <div class="skill-item">
+            <div class="sk-info"><span>Git &amp; Version Control</span><span>65%</span></div>
+            <div class="sk-track"><div class="sk-bar" data-w="65"></div></div>
           </div>
         </div>
 
-        <!-- Soft skills grid -->
+        <!-- Soft skills -->
         <div class="skills-col reveal">
           <h3 class="sk-col-title"><i class="fa-solid fa-brain"></i> Soft Skills</h3>
           <div class="soft-grid">
             <div class="soft-card">
-              <i class="fa-solid fa-comments"></i><span>Communication</span>
+              <i class="fa-solid fa-comments"></i> Communication
             </div>
             <div class="soft-card">
-              <i class="fa-solid fa-chess-knight"></i><span>Problem Solving</span>
+              <i class="fa-solid fa-people-group"></i> Teamwork
             </div>
             <div class="soft-card">
-              <i class="fa-solid fa-handshake"></i><span>Teamwork</span>
+              <i class="fa-solid fa-clock-rotate-left"></i> Time Management
             </div>
             <div class="soft-card">
-              <i class="fa-solid fa-arrows-rotate"></i><span>Adaptability</span>
-            </div>
-            <div class="soft-card">
-              <i class="fa-solid fa-magnifying-glass-chart"></i><span>Critical Thinking</span>
+              <i class="fa-solid fa-lightbulb"></i> Adaptability
             </div>
           </div>
         </div>
@@ -261,7 +290,7 @@
         <article class="proj-card reveal">
           <div class="proj-top">
             <div class="proj-icon"><i class="fa-solid fa-house-signal"></i></div>
-            <a href="#" aria-label="GitHub repo"><i class="fa-brands fa-github"></i></a>
+            <a href="#" aria-label="GitHub repo" title="View on GitHub"><i class="fa-brands fa-github"></i></a>
           </div>
           <span class="proj-type">Team Project · IoT</span>
           <h3 class="proj-title">Smart Home Security System</h3>
@@ -275,7 +304,7 @@
         <article class="proj-card reveal">
           <div class="proj-top">
             <div class="proj-icon"><i class="fa-solid fa-building-columns"></i></div>
-            <a href="#" aria-label="GitHub repo"><i class="fa-brands fa-github"></i></a>
+            <a href="#" aria-label="GitHub repo" title="View on GitHub"><i class="fa-brands fa-github"></i></a>
           </div>
           <span class="proj-type">Python · Console App</span>
           <h3 class="proj-title">Bank Management System</h3>
@@ -289,7 +318,7 @@
         <article class="proj-card reveal">
           <div class="proj-top">
             <div class="proj-icon"><i class="fa-solid fa-calculator"></i></div>
-            <a href="#" aria-label="GitHub repo"><i class="fa-brands fa-github"></i></a>
+            <a href="#" aria-label="GitHub repo" title="View on GitHub"><i class="fa-brands fa-github"></i></a>
           </div>
           <span class="proj-type">Python · Personal</span>
           <h3 class="proj-title">Calculator Application</h3>
@@ -392,25 +421,27 @@
         <!-- Contact cards -->
         <div class="contact-cards reveal">
 
-          <a href="mailto:anuragbtp561@gmail.com" class="cc">
+          <a href="mailto:anuragbtp561@gmail.com" class="cc" 
+             data-copy="anuragbtp561@gmail.com" title="Click to copy email">
             <div class="cc-icon"><i class="fa-solid fa-envelope"></i></div>
             <div class="cc-info">
               <span class="cc-label">Email</span>
               <span class="cc-val">anuragbtp561@gmail.com</span>
             </div>
-            <i class="fa-solid fa-arrow-up-right cc-arr"></i>
+            <i class="fa-solid fa-copy cc-arr" title="Copy"></i>
           </a>
 
-          <a href="tel:+919079742387" class="cc">
+          <a href="tel:+919079742387" class="cc"
+             data-copy="+919079742387" title="Click to copy number">
             <div class="cc-icon"><i class="fa-solid fa-phone"></i></div>
             <div class="cc-info">
               <span class="cc-label">Phone</span>
               <span class="cc-val">+91 9079742387</span>
             </div>
-            <i class="fa-solid fa-arrow-up-right cc-arr"></i>
+            <i class="fa-solid fa-copy cc-arr" title="Copy"></i>
           </a>
 
-          <a href="#" target="_blank" class="cc">
+          <a href="https://linkedin.com/in/anurag-sharma-08650426b" target="_blank" rel="noopener" class="cc">
             <div class="cc-icon"><i class="fa-brands fa-linkedin-in"></i></div>
             <div class="cc-info">
               <span class="cc-label">LinkedIn</span>
@@ -419,7 +450,7 @@
             <i class="fa-solid fa-arrow-up-right cc-arr"></i>
           </a>
 
-          <a href="#" target="_blank" class="cc">
+          <a href="https://github.com/anurag-sharma" target="_blank" rel="noopener" class="cc">
             <div class="cc-icon"><i class="fa-brands fa-github"></i></div>
             <div class="cc-info">
               <span class="cc-label">GitHub</span>
@@ -428,6 +459,13 @@
             <i class="fa-solid fa-arrow-up-right cc-arr"></i>
           </a>
 
+        </div>
+
+        <!-- Contact form -->
+       
+          
+
+      </div>
     </div>
   </section>
 
@@ -441,19 +479,25 @@
         <a href="#hero" class="brand">
           <span class="brand-bracket">{</span>AS<span class="brand-bracket">}</span>
         </a>
-        <p class="footer-copy">Crafted by <strong>Anurag Sharma</strong> · Jaipur, Rajasthan</p>
+        <p class="footer-copy">Crafted with <i class="fa-solid fa-heart" style="color:var(--accent)"></i> by <strong>Anurag Sharma</strong> · Jaipur, Rajasthan</p>
         <div class="footer-socials">
-          <a href="#" aria-label="LinkedIn" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
-          <a href="#" aria-label="GitHub"   target="_blank"><i class="fa-brands fa-github"></i></a>
-          <a href="mailto:anuragbtp561@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+          <a href="https://linkedin.com/in/anurag-sharma" aria-label="LinkedIn" target="_blank" rel="noopener">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+          <a href="https://github.com/anurag-sharma" aria-label="GitHub" target="_blank" rel="noopener">
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <a href="mailto:anuragsharma@email.com" aria-label="Email">
+            <i class="fa-solid fa-envelope"></i>
+          </a>
         </div>
       </div>
     </div>
   </footer>
 
-  <!-- Back to top button -->
+  <!-- Back to top -->
   <button class="btt" id="btt" aria-label="Back to top">
-    <i class="fa-solid fa-arrow-up"></i>
+    <i class="fa-solid fa-chevron-up"></i>
   </button>
 
   <script src="script.js"></script>
