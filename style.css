@@ -600,19 +600,24 @@ em     { color: var(--accent); font-style: normal; }
 
 .avatar-wrap {
   position: relative;
-  width: 160px; height: 160px;
+  width: 200px; height: 200px;
 }
-.avatar-initials {
+.avatar-img {
   position: absolute;
   inset: 0;
-  display: grid;
-  place-items: center;
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--accent) 0%, #e07b0a 100%);
-  font-size: 2.2rem;
-  font-weight: 800;
-  color: #0a0d14;
+  object-fit: cover;
+  object-position: top center;
+  border: 3px solid var(--accent);
+  box-shadow: 0 0 0 6px var(--accent-dim), var(--shadow-acc);
   z-index: 1;
+  transition: transform .4s var(--ease), box-shadow .4s var(--ease);
+}
+.avatar-img:hover {
+  transform: scale(1.04);
+  box-shadow: 0 0 0 8px var(--accent-dim), 0 0 60px var(--accent-glow);
 }
 .avatar-ring {
   position: absolute;
@@ -620,8 +625,8 @@ em     { color: var(--accent); font-style: normal; }
   border: 1.5px solid var(--accent-glow);
   animation: ringPulse 3s ease-in-out infinite;
 }
-.r1 { inset: -12px; }
-.r2 { inset: -24px; animation-delay: .6s; opacity: .5; }
+.r1 { inset: -14px; }
+.r2 { inset: -28px; animation-delay: .6s; opacity: .5; }
 @keyframes ringPulse {
   0%, 100% { opacity: .6; }
   50%       { opacity: .2; }
