@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anurag Sharma — Python Developer</title>
+  <meta name="description" content="Fresher Python Developer from Jaipur, Rajasthan. Strong fundamentals in programming, OOP, and problem-solving." />
+
+  <!-- ── Google Fonts ── -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- ── Font Awesome ── -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ╔═══════════════════════════╗
+       ║        NAVBAR             ║
+       ╚═══════════════════════════╝ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+
+      <!-- Brand logo -->
+      <a href="#hero" class="brand">
+        <span class="brand-bracket">{</span>AS<span class="brand-bracket">}</span>
+      </a>
+
+      <!-- Desktop nav links -->
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about"      class="nl">About</a></li>
+        <li><a href="#skills"     class="nl">Skills</a></li>
+        <li><a href="#projects"   class="nl">Projects</a></li>
+        <li><a href="#experience" class="nl">Experience</a></li>
+        <li><a href="#education"  class="nl">Education</a></li>
+        <li><a href="#contact"    class="nl">Contact</a></li>
+      </ul>
+
+      <!-- Controls: theme toggle + hamburger -->
+      <div class="nav-controls">
+        <button class="theme-btn" id="themeToggle" aria-label="Toggle theme">
+          <i class="fa-solid fa-moon" id="themeIcon"></i>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile dropdown -->
+    <div class="mobile-menu" id="mobileMenu">
+      <ul>
+        <li><a href="#about"      class="ml">About</a></li>
+        <li><a href="#skills"     class="ml">Skills</a></li>
+        <li><a href="#projects"   class="ml">Projects</a></li>
+        <li><a href="#experience" class="ml">Experience</a></li>
+        <li><a href="#education"  class="ml">Education</a></li>
+        <li><a href="#contact"    class="ml">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+
+  <!-- ╔═══════════════════════════╗
+       ║         HERO              ║
+       ╚═══════════════════════════╝ -->
+  <section class="hero" id="hero">
+    <!-- Background decoration -->
+    <div class="hero-grid" aria-hidden="true"></div>
+    <div class="orb orb-1" aria-hidden="true"></div>
+    <div class="orb orb-2" aria-hidden="true"></div>
+
+    <div class="hero-content">
+
+      <!-- Availability badge -->
+      <div class="hero-badge fade-up" style="--d:0s">
+        <span class="pulse-dot"></span>
+        Available for opportunities
+      </div>
+
+      <p class="hero-pre fade-up" style="--d:.1s">Hi there, I'm</p>
+
+      <h1 class="hero-name fade-up" style="--d:.2s">
+        Anurag <span class="accent-text">Sharma</span>
+      </h1>
+
+      <!-- Typing animation -->
+      <div class="typing-wrap fade-up" style="--d:.35s">
+        <span class="mono">//&nbsp;</span>
+        <span id="typingText" class="typing-text"></span>
+        <span class="cursor" aria-hidden="true">|</span>
+      </div>
+
+      <p class="hero-sub fade-up" style="--d:.45s">
+        Python Developer with strong fundamentals in programming and problem-solving,
+        based in <span class="accent-text">Jaipur, Rajasthan</span>.
+      </p>
+
+      <!-- Call-to-action buttons -->
+      <div class="hero-ctas fade-up" style="--d:.55s">
+        <a href="#" class="btn btn-primary" download>
+          <i class="fa-solid fa-file-arrow-down"></i> Download CV
+        </a>
+        <a href="#contact" class="btn btn-ghost">
+          <i class="fa-solid fa-paper-plane"></i> Hire Me
+        </a>
+      </div>
+
+      <!-- Social icons -->
+      <div class="hero-socials fade-up" style="--d:.65s">
+        <a href="#" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+        <a href="#" target="_blank" rel="noopener" aria-label="GitHub">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="mailto:anuragbtp561@gmail.com" aria-label="Email">
+          <i class="fa-solid fa-envelope"></i>
+        </a>
+      </div>
+
+    </div>
+
+    <!-- Scroll down hint -->
+    <a href="#about" class="scroll-nudge fade-up" style="--d:.8s" aria-label="Scroll down">
+      <i class="fa-solid fa-chevron-down"></i>
+    </a>
+  </section>
+
+
+  <!-- ╔═══════════════════════════╗
+       ║         ABOUT             ║
+       ╚═══════════════════════════╝ -->
+  <section class="section" id="about">
+    <div class="container">
+
+      <p class="sec-label reveal">01 — About</p>
+      <h2 class="sec-title reveal">Who I Am</h2>
+
+      <div class="about-grid">
+
+        <!-- Avatar / visual card -->
+        <div class="about-visual reveal">
+          <div class="avatar-wrap">
+            <div class="avatar-initials">AS</div>
+            <div class="avatar-ring r1"></div>
+            <div class="avatar-ring r2"></div>
+          </div>
+          <ul class="about-meta">
+            <li><i class="fa-solid fa-location-dot"></i> Jaipur, Rajasthan, India</li>
+            <li><i class="fa-solid fa-code"></i> Python Developer</li>
+            <li><i class="fa-solid fa-graduation-cap"></i> B.Tech CSE — 2025</li>
+          </ul>
+        </div>
+
+        <!-- Text -->
+        <div class="about-body reveal">
+          <p>I'm a Fresher <strong>Python Developer</strong> with a solid grasp of core programming — functions, loops, conditionals, global/local variables, and object-oriented programming.</p>
+          <p>I've turned that knowledge into real projects, including a <em>Bank Management System</em> and a <em>Calculator Application</em>, developing a sharp eye for clean, logical code.</p>
+          <p>I'm passionate about continuous learning and eager to join a growth-oriented company where I can contribute meaningfully and grow as a developer.</p>
+
+          <!-- Trait pills -->
+          <div class="pills">
+            <span class="pill"><i class="fa-brands fa-python"></i> Python Enthusiast</span>
+            <span class="pill"><i class="fa-solid fa-lightbulb"></i> Problem Solver</span>
+            <span class="pill"><i class="fa-solid fa-people-group"></i> Team Player</span>
+            <span class="pill"><i class="fa-solid fa-rocket"></i> Fast Learner</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ╔═══════════════════════════╗
+       ║         SKILLS            ║
+       ╚═══════════════════════════╝ -->
+  <section class="section section-tint" id="skills">
+    <div class="container">
+
+      <p class="sec-label reveal">02 — Skills</p>
+      <h2 class="sec-title reveal">My Toolkit</h2>
+
+      <div class="skills-wrap">
+
+        <!-- Technical skills with bars -->
+        <div class="skills-col reveal">
+          <h3 class="sk-col-title"><i class="fa-solid fa-terminal"></i> Technical Skills</h3>
+
+          <div class="skill-item">
+            <div class="sk-info"><span>Python</span><span>85%</span></div>
+            <div class="sk-track"><div class="sk-bar" data-w="85"></div></div>
+          </div>
+
+          <div class="skill-item">
+            <div class="sk-info"><span>C++</span><span>70%</span></div>
+            <div class="sk-track"><div class="sk-bar" data-w="70"></div></div>
+          </div>
+
+          <div class="skill-item">
+            <div class="sk-info"><span>OOP Concepts</span><span>78%</span></div>
+            <div class="sk-track"><div class="sk-fill" data-w="78"></div></div>
+          </div>
+
+          <div class="skill-item">
+            <div class="sk-info"><span>VS Code</span><span>82%</span></div>
+            <div class="sk-track"><div class="sk-bar" data-w="82"></div></div>
+          </div>
+
+          <div class="skill-item">
+            <div class="sk-info"><span>Jupyter Notebook</span><span>75%</span></div>
+            <div class="sk-track"><div class="sk-bar" data-w="75"></div></div>
+          </div>
+        </div>
+
+        <!-- Soft skills grid -->
+        <div class="skills-col reveal">
+          <h3 class="sk-col-title"><i class="fa-solid fa-brain"></i> Soft Skills</h3>
+          <div class="soft-grid">
+            <div class="soft-card">
+              <i class="fa-solid fa-comments"></i><span>Communication</span>
+            </div>
+            <div class="soft-card">
+              <i class="fa-solid fa-chess-knight"></i><span>Problem Solving</span>
+            </div>
+            <div class="soft-card">
+              <i class="fa-solid fa-handshake"></i><span>Teamwork</span>
+            </div>
+            <div class="soft-card">
+              <i class="fa-solid fa-arrows-rotate"></i><span>Adaptability</span>
+            </div>
+            <div class="soft-card">
+              <i class="fa-solid fa-magnifying-glass-chart"></i><span>Critical Thinking</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ╔═══════════════════════════╗
+       ║        PROJECTS           ║
+       ╚═══════════════════════════╝ -->
+  <section class="section" id="projects">
+    <div class="container">
+
+      <p class="sec-label reveal">03 — Projects</p>
+      <h2 class="sec-title reveal">Things I've Built</h2>
+
+      <div class="projects-grid">
+
+        <!-- Project 1 -->
+        <article class="proj-card reveal">
+          <div class="proj-top">
+            <div class="proj-icon"><i class="fa-solid fa-house-signal"></i></div>
+            <a href="#" aria-label="GitHub repo"><i class="fa-brands fa-github"></i></a>
+          </div>
+          <span class="proj-type">Team Project · IoT</span>
+          <h3 class="proj-title">Smart Home Security System</h3>
+          <p class="proj-desc">GSM-based home security system with motion detection, automatic phone-call alerts, and remote monitoring capabilities.</p>
+          <div class="proj-tags">
+            <span>GSM Module</span><span>IoT</span><span>Motion Detection</span>
+          </div>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="proj-card reveal">
+          <div class="proj-top">
+            <div class="proj-icon"><i class="fa-solid fa-building-columns"></i></div>
+            <a href="#" aria-label="GitHub repo"><i class="fa-brands fa-github"></i></a>
+          </div>
+          <span class="proj-type">Python · Console App</span>
+          <h3 class="proj-title">Bank Management System</h3>
+          <p class="proj-desc">Console banking app with account creation, deposits, withdrawals, and balance enquiry — built using Python functions and variable-scope management.</p>
+          <div class="proj-tags">
+            <span>Python</span><span>OOP</span><span>Functions</span>
+          </div>
+        </article>
+
+        <!-- Project 3 -->
+        <article class="proj-card reveal">
+          <div class="proj-top">
+            <div class="proj-icon"><i class="fa-solid fa-calculator"></i></div>
+            <a href="#" aria-label="GitHub repo"><i class="fa-brands fa-github"></i></a>
+          </div>
+          <span class="proj-type">Python · Personal</span>
+          <h3 class="proj-title">Calculator Application</h3>
+          <p class="proj-desc">Functional calculator with add, subtract, multiply, and divide — cleanly structured with Python functions and conditional logic.</p>
+          <div class="proj-tags">
+            <span>Python</span><span>Conditionals</span><span>Functions</span>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ╔═══════════════════════════╗
+       ║       EXPERIENCE          ║
+       ╚═══════════════════════════╝ -->
+  <section class="section section-tint" id="experience">
+    <div class="container">
+
+      <p class="sec-label reveal">04 — Experience</p>
+      <h2 class="sec-title reveal">Work History</h2>
+
+      <div class="timeline">
+        <div class="tl-item reveal">
+          <div class="tl-dot"><i class="fa-solid fa-briefcase"></i></div>
+          <div class="tl-card">
+            <div class="tl-head">
+              <div>
+                <h3 class="tl-role">Web Development Intern</h3>
+                <p class="tl-company">
+                  <i class="fa-solid fa-building"></i> Vanillkart
+                  <span class="tl-tag">Remote</span>
+                </p>
+              </div>
+              <span class="tl-date">Jul 2024 — Sep 2024</span>
+            </div>
+            <ul class="tl-bullets">
+              <li><i class="fa-solid fa-angle-right"></i> Web development tasks with cross-team collaboration</li>
+              <li><i class="fa-solid fa-angle-right"></i> Assisted in SEO optimization to improve search visibility</li>
+              <li><i class="fa-solid fa-angle-right"></i> Customized themes and plugins for enhanced user experience</li>
+              <li><i class="fa-solid fa-angle-right"></i> Supported digital marketing strategy and execution</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ╔═══════════════════════════╗
+       ║       EDUCATION           ║
+       ╚═══════════════════════════╝ -->
+  <section class="section" id="education">
+    <div class="container">
+
+      <p class="sec-label reveal">05 — Education</p>
+      <h2 class="sec-title reveal">Academic Background</h2>
+
+      <div class="edu-grid">
+
+        <div class="edu-card reveal">
+          <div class="edu-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+          <div class="edu-info">
+            <span class="edu-degree">B.Tech — Computer Science &amp; Engineering</span>
+            <span class="edu-inst">Rajasthan Technical University</span>
+            <span class="edu-year">2022 – 2025</span>
+          </div>
+          <span class="edu-badge">B.Tech</span>
+        </div>
+
+        <div class="edu-card reveal">
+          <div class="edu-icon"><i class="fa-solid fa-school"></i></div>
+          <div class="edu-info">
+            <span class="edu-degree">Diploma — Computer Engineering</span>
+            <span class="edu-inst">Board of Secondary Education, Rajasthan</span>
+            <span class="edu-year">2018 – 2021</span>
+          </div>
+          <span class="edu-badge">Diploma</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ╔═══════════════════════════╗
+       ║        CONTACT            ║
+       ╚═══════════════════════════╝ -->
+  <section class="section section-tint" id="contact">
+    <div class="container">
+
+      <p class="sec-label reveal">06 — Contact</p>
+      <h2 class="sec-title reveal">Get In Touch</h2>
+      <p class="sec-sub reveal">Open to internships, entry-level roles, and exciting collaborations.</p>
+
+      <div class="contact-grid">
+
+        <!-- Contact cards -->
+        <div class="contact-cards reveal">
+
+          <a href="mailto:anuragbtp561@gmail.com" class="cc">
+            <div class="cc-icon"><i class="fa-solid fa-envelope"></i></div>
+            <div class="cc-info">
+              <span class="cc-label">Email</span>
+              <span class="cc-val">anuragbtp561@gmail.com</span>
+            </div>
+            <i class="fa-solid fa-arrow-up-right cc-arr"></i>
+          </a>
+
+          <a href="tel:+919079742387" class="cc">
+            <div class="cc-icon"><i class="fa-solid fa-phone"></i></div>
+            <div class="cc-info">
+              <span class="cc-label">Phone</span>
+              <span class="cc-val">+91 9079742387</span>
+            </div>
+            <i class="fa-solid fa-arrow-up-right cc-arr"></i>
+          </a>
+
+          <a href="#" target="_blank" class="cc">
+            <div class="cc-icon"><i class="fa-brands fa-linkedin-in"></i></div>
+            <div class="cc-info">
+              <span class="cc-label">LinkedIn</span>
+              <span class="cc-val">Connect with me</span>
+            </div>
+            <i class="fa-solid fa-arrow-up-right cc-arr"></i>
+          </a>
+
+          <a href="#" target="_blank" class="cc">
+            <div class="cc-icon"><i class="fa-brands fa-github"></i></div>
+            <div class="cc-info">
+              <span class="cc-label">GitHub</span>
+              <span class="cc-val">Browse my repos</span>
+            </div>
+            <i class="fa-solid fa-arrow-up-right cc-arr"></i>
+          </a>
+
+    </div>
+  </section>
+
+
+  <!-- ╔═══════════════════════════╗
+       ║         FOOTER            ║
+       ╚═══════════════════════════╝ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <a href="#hero" class="brand">
+          <span class="brand-bracket">{</span>AS<span class="brand-bracket">}</span>
+        </a>
+        <p class="footer-copy">Crafted by <strong>Anurag Sharma</strong> · Jaipur, Rajasthan</p>
+        <div class="footer-socials">
+          <a href="#" aria-label="LinkedIn" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#" aria-label="GitHub"   target="_blank"><i class="fa-brands fa-github"></i></a>
+          <a href="mailto:anuragbtp561@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top button -->
+  <button class="btt" id="btt" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
