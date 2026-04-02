@@ -43,15 +43,20 @@
   --bg-surface:  #eef0f7;
   --bg-card:     #ffffff;
   --bg-card-hov: #f8f9ff;
-  --bg-glass:    rgba(255,255,255,.75);
+  --bg-glass:    rgba(255,255,255,.85);
+
+  --accent:      #e09400;
+  --accent-dim:  rgba(224,148,0,.12);
+  --accent-glow: rgba(224,148,0,.2);
 
   --text:        #1a202c;
   --text-2:      #4a5568;
   --text-3:      #9aa5b1;
 
   --border:      rgba(0,0,0,.08);
-  --border-acc:  rgba(245,166,35,.4);
+  --border-acc:  rgba(224,148,0,.4);
   --shadow:      0 4px 20px rgba(0,0,0,.1);
+  --shadow-acc:  0 0 40px rgba(224,148,0,.2);
 }
 
 /* ── Reset ─────────────────────────────────────────────────── */
@@ -62,13 +67,19 @@ html {
   scroll-padding-top: var(--nav-h);
 }
 
+/* Disable transition on initial page load (prevent flash) */
 body {
   font-family: var(--font-body);
   background: var(--bg);
   color: var(--text);
   line-height: 1.7;
   overflow-x: hidden;
-  transition: background var(--t), color var(--t);
+}
+
+/* Only enable smooth transition AFTER JS has set the theme */
+body.theme-ready,
+body.theme-ready * {
+  transition: background var(--t), color var(--t), border-color var(--t), box-shadow var(--t);
 }
 
 /* Scrollbar */

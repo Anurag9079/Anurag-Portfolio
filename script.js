@@ -211,9 +211,17 @@ document.addEventListener('click', e => {
 /* ════════════════════════════════════════
    DARK / LIGHT THEME TOGGLE
 ════════════════════════════════════════ */
-const savedTheme = localStorage.getItem('theme') || 'dark';
-html.setAttribute('data-theme', savedTheme);
+// Theme was already applied by inline <head> script to prevent FOUC.
+// Here we just sync the icon and wire up the toggle button.
+const savedTheme = html.getAttribute('data-theme') || 'dark';
 updateThemeIcon(savedTheme);
+
+// Enable smooth transitions only after first paint
+requestAnimationFrame(() => {
+  requestAnimationFrame(() => {
+    document.body.classList.add('theme-ready');
+  });
+});
 
 themeToggle.addEventListener('click', () => {
   const current = html.getAttribute('data-theme');
@@ -338,14 +346,20 @@ function animateCounter(el) {
 const counterObserver = new IntersectionObserver(
   entries => {
     entries.forEach(entry => {
+      const numEl = entry.target.querySelector('.stat-num');
+      if (!numEl) return;
+
       if (entry.isIntersecting) {
-        const numEl = entry.target.querySelector('.stat-num');
-        if (numEl) animateCounter(numEl);
-        counterObserver.unobserve(entry.target);
+        // Reset to 0 first, then animate up
+        numEl.textContent = '0';
+        animateCounter(numEl);
+      } else {
+        // Reset when card leaves viewport so next entry starts fresh
+        numEl.textContent = '0';
       }
     });
   },
-  { threshold: 0.4 }
+  { threshold: 0.5 }
 );
 
 $$('.stat-card').forEach(card => counterObserver.observe(card));
